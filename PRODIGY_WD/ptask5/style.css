@@ -1,0 +1,135 @@
+/* Universal Presets Layout Configuration */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #2c3e50, #000000); /* Dark metallic climate theme background */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* Central Application Box Wrapper */
+.weather-box {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    width: 380px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* Form Search Interaction Controls Row layout */
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#cityInput {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+}
+
+#cityInput::placeholder {
+    color: #cbd5e1;
+}
+
+#searchBtn {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+#searchBtn:hover {
+    background-color: #2980b9;
+}
+
+/* Dynamic Output Cards Control */
+.weather-result {
+    margin-top: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#cityName {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.description {
+    font-size: 16px;
+    color: #a1a1aa;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.temp {
+    font-size: 54px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #f1c40f; /* Warm sun yellow highlight accent */
+}
+
+/* Extra Atmospheric Subsections Layout Row */
+.extra-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.info-card {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.info-card span {
+    color: #94a3b8;
+}
+
+/* Error text parameters configuration style */
+.error-msg {
+    color: #ef4444;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Utility layout hidden visibility flag toggled by engine javascript */
+.hidden {
+    display: none !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

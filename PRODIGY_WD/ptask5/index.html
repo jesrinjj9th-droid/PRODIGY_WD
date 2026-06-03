@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodigy Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="weather-box">
+        <h1>WEATHER REPORT</h1>
+        
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Enter city name... (e.g., London)">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="weatherResult" class="weather-result hidden">
+            <h2 id="cityName">City Name</h2>
+            <p id="weatherDescription" class="description">Cloudy</p>
+            <div id="tempDisplay" class="temp">24°C</div>
+            
+            <div class="extra-info">
+                <div class="info-card">
+                    <span>Humidity</span>
+                    <strong id="humidityDisplay">60%</strong>
+                </div>
+                <div class="info-card">
+                    <span>Wind Speed</span>
+                    <strong id="windDisplay">12 km/h</strong>
+                </div>
+            </div>
+        </div>
+
+        <div id="errorMessage" class="error-msg hidden">City not found. Please check spelling!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

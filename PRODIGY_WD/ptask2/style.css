@@ -1,0 +1,112 @@
+/* Reset background and center everything on the screen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace; /* Gives a digital clock vibe */
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Nice blue gradient */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* Container Box */
+.stopwatch-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* Modern glassmorphism look */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 400px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* Big Digital Time Display */
+.display {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    background: #111;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0,255,0,0.2); /* Subtle glow placeholder */
+    color: #00ff88; /* Neon green digital text style */
+}
+
+/* Buttons Group */
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Different button styling */
+#startBtn { background-color: #00ff88; color: #111; }
+#pauseBtn { background-color: #ffcc00; color: #111; }
+#lapBtn { background-color: #3498db; color: #fff; }
+#resetBtn { background-color: #e74c3c; color: #fff; }
+
+/* When a button is disabled, make it look faded */
+button:disabled {
+    background-color: #555 !important;
+    color: #888 !important;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+button:hover:not(:disabled) {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* Laps Section Layout */
+.laps-box {
+    margin-top: 10px;
+    max-height: 150px;
+    overflow-y: auto; /* Adds a scrollbar if there are too many laps */
+    text-align: left;
+    background: rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.laps-box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 5px;
+}
+
+#lapsList {
+    list-style: none;
+}
+
+#lapsList li {
+    padding: 5px 0;
+    font-size: 14px;
+    border-bottom: 1px dashed rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-between;
+}
